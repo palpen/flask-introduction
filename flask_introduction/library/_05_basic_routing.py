@@ -38,7 +38,8 @@ AUTHORS_INFO = {
 def authors():
     return render_template('routing/authors.html')
 
-
+# dynamic routing, put in <>
+# routing lives in the parent directory inside library/templates
 @app.route('/author/<authors_last_name>')
 def author(authors_last_name):
     return render_template('routing/author.html',

@@ -4,6 +4,7 @@ Mixing Python code with HTML is ugly. Templates usually live in their own
 location. By default, flask will look up for templates in a 'templates'
 directory living in the same path as the application.
 
+Key idea is to separate business from presentation logic. Presentation logic is the front-end stuff dedicate to the presentaiton of the data. In this example, they are stored in index.html. Business logic is concerned with the infrastructure and data management aspects. This is the back-end stuff.
 """
 
 from flask import Flask
