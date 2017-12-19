@@ -13,13 +13,39 @@ from flask import Flask
 app = Flask(__name__)
 
 
+# @app.route('/')
+# def hello_world():
+#     html = """
+#         <html>
+#             <h1>Welcome to our Library!</h1>
+#             <ul>
+#                 {}
+#             </ul>
+#         </html>
+#     """
+#     authors = ["Alan Poe", "Jorge L. Borges", "Mark Twain"]
+
+#     # build an <ul> with authors
+#     author_list = '\n'.join(['<li>' + a + '</li>' for a in authors])
+
+#     # alternatively
+
+#     return html.format(author_list)
+
+# Other solution
 @app.route('/')
 def hello_world():
     html = """
         <html>
             <h1>Welcome to our Library!</h1>
+            <ul>
+                {authors}
+            </ul>
         </html>
     """
     authors = ["Alan Poe", "Jorge L. Borges", "Mark Twain"]
+
     # build an <ul> with authors
-    return html
+    author_list = '\n'.join(['<li>' + a + '</li>' for a in authors])
+
+    return html.format(authors=author_list)
