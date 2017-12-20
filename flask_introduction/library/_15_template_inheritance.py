@@ -1,3 +1,7 @@
+"""
+Insert information provided in form into database
+"""
+
 from flask import Flask, request, render_template
 import sqlite3
 from . import config
